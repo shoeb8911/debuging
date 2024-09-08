@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: salary-bouns-dates
+    volumes:
+      - .:/app
+    command: php artisan generate:payment-dates
